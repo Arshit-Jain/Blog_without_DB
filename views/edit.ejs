@@ -1,0 +1,36 @@
+<form action="/edit/<%= posts.id %>" method="POST" class="edit-form">
+    <p>Title</p>
+    <input type="text" name="title" value="<%= posts.title %>" required class="form-input">
+    <p>Blog</p>
+    <textarea name="content" required class="form-textarea"><%= posts.blog %></textarea>
+    <button type="submit" class="form-button">Save Changes</button>
+</form>
+
+<style>
+    .edit-form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    .form-input, .form-textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .form-button:hover {
+        background-color: #45a049;
+    }
+</style>
